@@ -6,7 +6,12 @@ Inside the `src` folder, create a file named `index.ts`.
 
 Your folder structure should look like this:
 
-module1/ ├── src/ │ └── index.ts
+```
+module1/
+├── src/
+│   └── index.ts
+```
+
 
 
 
