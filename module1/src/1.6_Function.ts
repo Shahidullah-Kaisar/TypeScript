@@ -1,3 +1,5 @@
+{ //Prevent Global Scope Conflict problem
+
 //Normal function
 
 function add (num1 : number, num2 : number) : number{
@@ -31,6 +33,21 @@ const arr : number[] = [1,4,10];
 const newArray : number[] = arr.map( (elem : number) : number => elem * elem );
 
 
+} //Prevent Global Scope Conflict problem
+
+
+
+/*
+Global Scope Conflict:
+If you create a variable in a TypeScript file without using export or import, TypeScript treats the file like a script, not a module.
+
+That means the variable goes into the global scope, and if you use the same variable name in another file, it can cause errors or conflicts.
+
+Easy Fix:
+To stop this from happening, just add this line at the end of your file: {}
+This tells TypeScript to treat the file as a module, so your variables stay private to that file.
+
+*/
 /*
 
 Normal Function:
