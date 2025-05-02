@@ -35,6 +35,7 @@ Open `tsconfig.json` and modify the following options to match your folder struc
     // "esModuleInterop": true
   }
 }
+```
 * rootDir tells TypeScript where the source files are.
 * outDir tells it where to place the compiled JavaScript files.
 * strict enables strict type-checking for better code safety.
@@ -55,17 +56,26 @@ module1/
 
 
 
-// npm i -g ts-node-dev
-//ts-node-dev --respawn --transpile-only server.ts(file name)
+#npm i -g ts-node-dev
+#ts-node-dev --respawn --transpile-only server.ts(file name)
 
+## Global Installation
 
-What it does:
+To install `ts-node-dev` globally so it can be used from anywhere on your system:
 
-npm i -g means you're installing a package globally (so it can be used from anywhere on your system).
-ts-node-dev is a development tool for running TypeScript files directly and automatically restarting the app when files change.
+```bash
+npm install -g ts-node-dev
+What is ts-node-dev?
+ts-node-dev is a development tool that helps you run TypeScript files without manual compilation, and automatically restarts your app when you make changes.
 
-Purpose of ts-node-dev:
+Purpose and Benefits
+Run TypeScript directly – like ts-node, without needing to compile .ts files.
 
-Runs TypeScript files without compiling them manually – like ts-node.
-Watches for file changes – like nodemon, it automatically restarts the server when your code changes.
-Faster restarts – it caches parts of your code, so the restarts are faster than ts-node + nodemon.
+Auto-restart on file changes – similar to nodemon.
+
+Faster restarts – uses caching to speed up reloads compared to ts-node + nodemon.
+
+Example Usage:
+
+ts-node-dev src/index.ts
+This command runs your TypeScript file and restarts it automatically when your code changes.
