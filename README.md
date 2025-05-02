@@ -46,6 +46,7 @@ tsc
 
 This will compile your index.ts file and generate a dist folder:
 
+```json
 
 module1/
 ├── dist/
@@ -54,12 +55,12 @@ module1/
 │   └── index.ts
 ├── tsconfig.json
 
-
+```
 
 #npm i -g ts-node-dev
 #ts-node-dev --respawn --transpile-only server.ts(file name)
 
-## Global Installation
+# Global Installation
 
 To install `ts-node-dev` globally so it can be used from anywhere on your system:
 
