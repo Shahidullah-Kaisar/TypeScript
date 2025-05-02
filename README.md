@@ -52,3 +52,20 @@ module1/
 ├── src/
 │   └── index.ts
 ├── tsconfig.json
+
+
+
+// npm i -g ts-node-dev
+//ts-node-dev --respawn --transpile-only server.ts(file name)
+
+
+What it does:
+
+npm i -g means you're installing a package globally (so it can be used from anywhere on your system).
+ts-node-dev is a development tool for running TypeScript files directly and automatically restarting the app when files change.
+
+Purpose of ts-node-dev:
+
+Runs TypeScript files without compiling them manually – like ts-node.
+Watches for file changes – like nodemon, it automatically restarts the server when your code changes.
+Faster restarts – it caches parts of your code, so the restarts are faster than ts-node + nodemon.

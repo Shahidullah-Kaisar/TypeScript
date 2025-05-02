@@ -1,4 +1,4 @@
-{ ////Prevent Global Scope Conflict problem
+{ //Prevent Global Scope Conflict problem
 
 
 //spread operator
@@ -25,7 +25,6 @@ const mentorList = {
     ...mentors1,
     ...mentors2
 }
-
 
 //Rest operator
 

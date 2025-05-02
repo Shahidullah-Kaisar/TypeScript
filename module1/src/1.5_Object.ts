@@ -1,4 +1,5 @@
 // Reference Type ---> Object
+{
 
 const user:{
     readonly company: string;  //literal type
@@ -14,6 +15,8 @@ const user:{
     isMarried: true,
 }
 
+
+}
 
 /*
 
