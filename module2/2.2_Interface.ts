@@ -1,74 +1,79 @@
 {
-    // interface
+  // interface
 
-    // Defining object types using type alias
-        type User1 = {
-            name: string,
-            age: number,
-        }
+  // Defining object types using type alias
+  type User1 = {
+    name: string;
+    age: number;
+  };
 
-        // Defining object types using interface
-        interface User2 {
-            name: string,
-            age: number,
-        }
+  // Defining object types using interface
+  interface User2 {
+    name: string;
+    age: number;
+  }
 
-        // Extending a type alias using intersection (&)
-        type UserWithRole1 = User1 & { role: string };
+  // Extending a type alias using intersection (&)
+  type UserWithRole1 = User1 & { role: string };
 
-        // Extending an interface using 'extends'
-        interface UserWithRole2 extends User2 {
-            role: string;
-        }
+  // Extending an interface using 'extends' // That means the properties of the previous interface are copied into the new interface, and you can also add new properties if you want.
+  interface UserWithRole2 extends User2 {
+    role: string;
+  }
+  //output:
+    /*
+    {
+        name: string,
+        age: number,
+        role: string
+    }
 
-        // This is also valid: an interface extending a type alias
-        interface UserWithRole2 extends User1 {
-            role: string;
-        }
+    */
 
-        // Using the extended type alias
-        const user1: UserWithRole1 = {
-            name: "Sajib",
-            age: 23,
-            role: "Admin",
-        }
+  // This is also valid: an interface extending a type alias
+  interface UserWithRole2 extends User1 {
+    role: string;
+  }
 
-        
-        // You can also use the interface-based type
-        const user1: UserWithRole2 = {
-            name: "Sajib",
-            age: 23,
-            role: "Admin",
-        }
-        
+  // Using the extended type alias
+  const user1: UserWithRole1 = {
+    name: "Sajib",
+    age: 23,
+    role: "Admin",
+  };
 
-        // Array with type alias
-        type Roll1 = number[];
+  // You can also use the interface-based type
+  const user1: UserWithRole2 = {
+    name: "Sajib",
+    age: 23,
+    role: "Admin",
+  };
 
-        // Array with interface using index signature
-        interface Roll2 {
-            [index: number]: number;
-        }
+  // Array with type alias
+  type Roll1 = number[];
 
-        // Using interface to type an array
-        const rollNumber1: Roll2 = [1, 2, 3];  // Also works with Roll1
+  // Array with interface using index signature
+  interface Roll2 {
+    [index: number]: number;
+  }
 
-        // Function type using type alias
-        type Add1 = (num1: number, num2: number) => number;
+  // Using interface to type an array
+  const rollNumber1: Roll2 = [1, 2, 3]; // Also works with Roll1
 
-        // Function type using interface
-        interface Add2 {
-            (num1: number, num2: number): number;
-        }
+  // Function type using type alias
+  type Add1 = (num1: number, num2: number) => number;
 
-        // Assigning a function using type alias
-        const add: Add1 = (num1, num2) => num1 + num2;
-        // Also valid:
-        // const add: Add2 = (num1, num2) => num1 + num2;
+  // Function type using interface
+  interface Add2 {
+    (num1: number, num2: number): number;
+  }
 
+  // Assigning a function using type alias
+  const add: Add1 = (num1, num2) => num1 + num2;
+  // Also valid:
+  // const add: Add2 = (num1, num2) => num1 + num2;
 
-
-    //
+  //
 }
 
 /*

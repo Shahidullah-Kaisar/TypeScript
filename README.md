@@ -57,8 +57,12 @@ module1/
 
 ```
 
-#npm i -g ts-node-dev
-#ts-node-dev --respawn --transpile-only server.ts(file name)
+# Install ts-node-dev globally
+npm i -g ts-node-dev
+
+# Run ts-node-dev with server.ts
+ts-node-dev --respawn --transpile-only server.ts(file name)
+
 
 #Global Installation
 
